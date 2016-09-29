@@ -14,6 +14,17 @@ export default merge(baseConfig, {
         publicPath: `http://localhost:${port}/dist`
     },
 
+    plugins: [
+   	    new webpack.ProvidePlugin({
+   	    	$: 'jquery',
+   	    	jQuery: 'jquery',
+   	    	jquery: 'jquery',
+   	    	'window.jQuery': 'jquery',
+   	    	'window.jquery': 'jquery',
+   	    	'window.$': 'jquery',
+        })
+   ],
+
     module:{
         loaders:[
             {
@@ -28,6 +39,9 @@ export default merge(baseConfig, {
                     'style-loader',
                     'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
                 ]
+            },{
+                test:/\.(eot|woff|woff2|ttf|svg)$/,
+                loader: 'file'
             }
         ]
     },
