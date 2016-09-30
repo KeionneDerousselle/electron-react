@@ -6,6 +6,7 @@
   "scripts": {
     "build-main": "node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.electron.js --progress --profile --colors",
     "build-renderer": "node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.development.js --progress --profile --colors",
+    "build":"npm run build-main & npm run build-renderer",
     "start": "electron ./",
     "start-dev": "electron -r babel-register -r babel-polyfill ./main.development",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,0 +1,22 @@
+body{
+    background-color: #fcfcfc; 
+    font-family: "Roboto", sans-serif;
+}
+
+.header{
+    color:#26a69a;
+    font-weight: 300;
+}
+
+.memento-display{
+    background-color: #f5f2f0; 
+    height: 500px;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.right{
+    float:right;
+}

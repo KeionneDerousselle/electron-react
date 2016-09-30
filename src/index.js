@@ -2,14 +2,19 @@ import React from 'react';
 import {render} from 'react-dom';
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
+import './app.css';
+import App from './containers/App';
+
+
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+          
 
 render(
 
     <div className="container">
-        <div className="input-field">
-          <input id="first_name" type="text" className="validate"/>
-          <label htmlFor="first_name">First Name</label>
-        </div>
+        <App/>
     </div>,
     document.getElementById('root')
 );
