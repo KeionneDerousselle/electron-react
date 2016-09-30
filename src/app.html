@@ -2,6 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <script>
+            if (!process.env.HOT) {
+              const link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = '../dist/main.css';
+              document.write(link.outerHTML);
+            }
+        </script>
     </head>
     <body>
         <div id="root"></div>

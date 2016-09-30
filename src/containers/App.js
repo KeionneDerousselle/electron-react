@@ -7,7 +7,6 @@ export default class App extends Component {
 
     constructor()
     {
-      console.log('app ctor');
       $('select').material_select();
       super();
     }
